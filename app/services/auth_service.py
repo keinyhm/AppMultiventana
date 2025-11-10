@@ -1,6 +1,7 @@
 import sqlite3
 import hashlib
-from models import users
+from app.models import users
+from typing import Optional
 
 class AuthService:
     def __init__(self, conn: sqlite3.Connection):
@@ -23,7 +24,7 @@ class AuthService:
         except sqlite3.IntegrityError:
             return False
 
-    def authenticate(self, username: str, password: str) -> users | None:
+    def authenticate(self, username: str, password: str) -> Optional[users]:
         hash_pass = self._hash_password(password)
         cur = self.conn.cursor()
         cur.execute(

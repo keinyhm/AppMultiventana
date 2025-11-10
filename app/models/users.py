@@ -1,7 +1,8 @@
 from dataclasses import dataclass
 
 @dataclass
-class User:
+class users:
+    """Un modelo de datos para guardar la info de un usuario."""
     id: int
     username: str
-    password: str #contraseña con el hash ya aplicado
+    password: str

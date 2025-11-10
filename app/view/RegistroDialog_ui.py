@@ -18,7 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QDialog, QFormLayout, QLabel,
     QLineEdit, QPushButton, QSizePolicy, QWidget)
 
-class Ui_RegistgroDialog(object):
+class Ui_RegistroDialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
