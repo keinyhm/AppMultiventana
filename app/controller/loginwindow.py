@@ -35,7 +35,7 @@ class LoginWindow(QWidget, Ui_LoginWindow):
         user = self.leUser.text().strip()
         pw = self.lePass.text()
 
-        if user == "admin" and pw == "1234":
+        if user and pw:
             self.status_bar.showMessage(tr["login_success"], 3000)
             self.on_success(user)
             self.app_state["user"]=user
