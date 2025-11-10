@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>793</width>
+    <height>583</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Dubai</family>
+    <pointsize>16</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #f5f5dc;
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lblWelcome">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Dubai</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+
+</string>
+    </property>
+    <property name="text">
+     <string>Bienvenido!</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>793</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar {
+    background-color: #ececec;
+}
+QMenuBar::item {
+    color: black;
+}
+QMenuBar::item:selected {
+    background-color: #dcdcdc;
+}
+QMenu {
+    color: black;
+    background-color: #f5f5f5;
+}
+QMenu::item:selected {
+    background-color: #dcdcdc;
+}
+
+</string>
+   </property>
+   <widget class="QMenu" name="menuSalir">
+    <property name="styleSheet">
+     <string notr="true">color: black;
+
+
+</string>
+    </property>
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuEdicion">
+    <property name="styleSheet">
+     <string notr="true">color: black;
+</string>
+    </property>
+    <property name="title">
+     <string>Edición</string>
+    </property>
+    <addaction name="actionConfiguracion"/>
+   </widget>
+   <widget class="QMenu" name="menuVentanas">
+    <property name="styleSheet">
+     <string notr="true">color: black;
+
+</string>
+    </property>
+    <property name="title">
+     <string>Ventanas</string>
+    </property>
+    <addaction name="actionNotas"/>
+   </widget>
+   <addaction name="menuSalir"/>
+   <addaction name="menuEdicion"/>
+   <addaction name="menuVentanas"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">color: black;
+</string>
+   </property>
+  </widget>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+   <property name="statusTip">
+    <string>Salir de la aplicación</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionConfiguracion">
+   <property name="text">
+    <string>Edición</string>
+   </property>
+   <property name="statusTip">
+    <string>Abrir ventana de configuración</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionNotas">
+   <property name="text">
+    <string>Notas</string>
+   </property>
+   <property name="statusTip">
+    <string>Abrir notas rápidas</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
