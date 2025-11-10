@@ -16,17 +16,17 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFormLayout, QLabel, QLineEdit,
-    QPushButton, QSizePolicy, QWidget)
+    QPushButton, QSizePolicy, QVBoxLayout, QWidget)
 
-class Ui_LoginWindow(object):
+class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(495, 323)
+        Form.resize(495, 304)
         Form.setStyleSheet(u"background-color: #f5f5dc;")
         self.formLayoutWidget = QWidget(Form)
         self.formLayoutWidget.setObjectName(u"formLayoutWidget")
-        self.formLayoutWidget.setGeometry(QRect(50, 60, 401, 221))
+        self.formLayoutWidget.setGeometry(QRect(50, 60, 401, 211))
         self.formLayout = QFormLayout(self.formLayoutWidget)
         self.formLayout.setObjectName(u"formLayout")
         self.formLayout.setHorizontalSpacing(8)
@@ -72,10 +72,23 @@ class Ui_LoginWindow(object):
 
         self.formLayout.setWidget(2, QFormLayout.ItemRole.SpanningRole, self.btnLogin)
 
+        self.verticalLayout_2 = QVBoxLayout()
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.btnRegistro = QPushButton(self.formLayoutWidget)
+        self.btnRegistro.setObjectName(u"btnRegistro")
+        self.btnRegistro.setFont(font)
+        self.btnRegistro.setStyleSheet(u"color: black\n"
+"")
+
+        self.verticalLayout_2.addWidget(self.btnRegistro)
+
         self.lblMsg = QLabel(self.formLayoutWidget)
         self.lblMsg.setObjectName(u"lblMsg")
 
-        self.formLayout.setWidget(3, QFormLayout.ItemRole.SpanningRole, self.lblMsg)
+        self.verticalLayout_2.addWidget(self.lblMsg)
+
+
+        self.formLayout.setLayout(3, QFormLayout.ItemRole.SpanningRole, self.verticalLayout_2)
 
         self.lblLogIn = QLabel(Form)
         self.lblLogIn.setObjectName(u"lblLogIn")
@@ -109,6 +122,7 @@ class Ui_LoginWindow(object):
 #endif // QT_CONFIG(tooltip)
         self.lePass.setPlaceholderText(QCoreApplication.translate("Form", u"Contrase\u00f1a", None))
         self.btnLogin.setText(QCoreApplication.translate("Form", u"Ingresar", None))
+        self.btnRegistro.setText(QCoreApplication.translate("Form", u"Registrarse", None))
         self.lblMsg.setText("")
         self.lblLogIn.setText(QCoreApplication.translate("Form", u"Inicia Sesi\u00f3n", None))
     # retranslateUi
