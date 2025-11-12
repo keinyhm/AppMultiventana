@@ -6,14 +6,16 @@ from app.view.LoginWindow_ui import Ui_LoginWindow
 from app.view.HomeWindow_ui import Ui_MainWindow
 from app.view.SettingsDialog_ui import Ui_SettingsDialog
 from app.view.NotasDialog_ui import Ui_NotasDialog
+from app.services.auth_service import AuthService
+import sqlite3
 
 
 class AppController:
     """Controlador principal de la aplicación."""
-    def __init__(self):
-        # Estado global
+    def __init__(self, conn: sqlite3.Connection):
+        self.auth_service = AuthService(conn)
         self.app_state = {"language": "Español"}
-        self.login = LoginWindow(self.on_login_success, self.app_state)
+        self.login = LoginWindow(self.auth_service, self.on_login_success, self.app_state)
         self.home = None
 
     def on_login_success(self, user: str):

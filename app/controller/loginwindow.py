@@ -13,6 +13,8 @@ class LoginWindow(QWidget, Ui_LoginWindow):
         self.app_state = app_state
         # Quitar barra de título y bordes del sistema
         self.setWindowFlags(Qt.FramelessWindowHint)
+
+        self.auth_service = auth_service
         
         # Barra de estado
         self.status_bar = QStatusBar(self)
