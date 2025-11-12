@@ -1,10 +1,10 @@
-from PySide6.QtWidgets import QWidget, QStatusBar
+from PySide6.QtWidgets import QDialog
 from PySide6.QtCore import Qt
 from app.view.RegistroDialog_ui import Ui_RegistroDialog
 from app.translations import TRANSLATIONS
 from app.services import auth_service
 
-class RegistroDialog(QWidget, Ui_RegistroDialog):
+class RegistroDialog(QDialog, Ui_RegistroDialog):
     def __init__(self, auth_service: auth_service.AuthService, parent=None):
         super().__init__(parent)
         

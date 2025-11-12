@@ -53,6 +53,7 @@ class Ui_RegistroDialog(object):
 
         self.leUs = QLineEdit(self.formLayoutWidget)
         self.leUs.setObjectName(u"leUs")
+        self.leUs.setStyleSheet(u"color: black")
 
         self.formLayout.setWidget(0, QFormLayout.ItemRole.FieldRole, self.leUs)
 
@@ -65,6 +66,7 @@ class Ui_RegistroDialog(object):
 
         self.lePwd = QLineEdit(self.formLayoutWidget)
         self.lePwd.setObjectName(u"lePwd")
+        self.lePwd.setStyleSheet(u"color: black")
 
         self.formLayout.setWidget(1, QFormLayout.ItemRole.FieldRole, self.lePwd)
 
