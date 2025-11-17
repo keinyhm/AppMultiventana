@@ -1,0 +1,235 @@
+/* =========================================================================
+   ESTILO GLOBAL 
+   estilo de la aplicacion en azul
+   ========================================================================= */
+
+
+/* ======== Fondo general ======== */
+QWidget, QDialog, QMainWindow {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #94afff, stop:1 #e9eef6);
+    font-family: 'Dubai';
+    font-size: 14px;
+    color: #a0c7ff;
+}
+
+
+/* ======== Labels (etiquetas) ======== */
+QLabel {
+    color: #94afff;
+    font-weight: 600;
+}
+
+/* ======== Tooltips ======== */
+QToolTip {
+    background-color: #94afff;
+    color: #f8fafc;
+    border: 1px solid #6f9dff;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+/* =========================================================================
+   LOGIN WINDOW
+   ========================================================================= */
+#LoginWindow {
+    background-color: #6f9dff;
+    border-radius: 12px;
+}
+
+
+QLineEdit {
+    background-color: #ffffff;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    padding: 6px 10px;
+    selection-background-color: #bbf7d0;
+    selection-color: #6f9dff;
+}
+QLineEdit:hover { border-color: #6d94ff; }
+QLineEdit:focus { border-color: #5b94fd; }
+
+QPushButton#btnLogin {
+    background-color: #6f9dff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-weight: 700;
+}
+QPushButton#btnLogin:hover   { background-color: #6f9dff; }
+QPushButton#btnLogin:pressed { background-color: #5f99ff; }
+QPushButton#btnLogin:disabled {
+    background-color: #9ca3af;
+    color: #f3f4f6;
+}
+
+/* Barra de estado del login */
+QStatusBar {
+    background-color: #e2e8f0;
+    border-top: 1px solid #cbd5e1;
+    color: #8dbcff;
+    font-size: 12px;
+    min-height: 10px;
+    max-height: 20px;
+}
+
+
+/* =========================================================================
+   HOME WINDOW
+   ========================================================================= */
+QMainWindow#HomeWindow {
+    border-radius: 10px;
+}
+
+QMenuBar {
+    background-color: #e5e7eb;
+    color: #6797ff;
+    font-weight: 600;
+    border: none;
+}
+QMenuBar::item {
+    background: transparent;
+    padding: 4px 12px;
+}
+QMenuBar::item:selected {
+    background: #dcfce7;
+    border-radius: 6px;
+}
+QMenu {
+    background-color: #68aaff;
+    border: 1px solid #56a2ff;
+    padding: 4px;
+    border-radius: 6px;
+}
+QMenu::item:selected {
+    background-color: #dcfce7;
+    border-radius: 4px;
+}
+
+/* Etiqueta principal del home */
+QLabel#lblWelcome {
+    color: #57a6ff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Imagen en HomeWindow */
+QLabel#lblImage {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 4px;
+}
+
+/* Barra de estado */
+QStatusBar {
+    background-color: #e2e8f0;
+    border-top: 1px solid #cbd5e1;
+    color: #6aa8ff;
+    font-size: 12px;
+    min-height: 20px;
+    max-height: 22px;
+}
+
+/* =========================================================================
+   NOTAS DIALOG
+   ========================================================================= */
+QDialog#NotasDialog {
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    padding: 10px;
+}
+
+QLabel#lblNotesTitle {
+    color: #6083ff;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+QTextEdit#teNotes {
+    background-color: #ffffff;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px 10px;
+    color: #719eff;
+    selection-background-color: #bbf7d0;
+    selection-color: #111827;
+}
+QTextEdit:hover { border-color: #546eff; }
+QTextEdit:focus { border-color: #5691ff; }
+
+QDialogButtonBox {
+    border-top: 1px solid #cbd5e1;
+    margin-top: 12px;
+    padding-top: 8px;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    border: none;
+    background: #f1f5f9;
+    width: 10px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical {
+    background: #cbd5e1;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #5fb2ff;
+}
+
+
+/* =========================================================================
+   SETTINGS DIALOG
+   ========================================================================= */
+QDialog#SettingsDialog {
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    padding: 10px;
+}
+
+QLabel {
+    color: #395aff;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+QComboBox {
+    background-color: #ffffff;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    padding: 6px 10px;
+    color: #6797ff;
+}
+QComboBox:hover { border-color: #6a79ff; }
+QComboBox:focus { border-color: #4447ff; }
+
+QComboBox::drop-down {
+    border: none;
+    width: 24px;
+}
+QComboBox::down-arrow { image: none; }
+
+/* Botones generales (válido para todos los diálogos) */
+QPushButton {
+    background-color: #63bbff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-weight: 600;
+}
+QPushButton:hover   { background-color: #625af9; }
+QPushButton:pressed { background-color: #6676ff; }
+QPushButton:disabled {
+    background-color: #96b6ef;
+    color: #f3f4f6;
+}

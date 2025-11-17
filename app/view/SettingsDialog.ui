@@ -104,7 +104,7 @@
       </item>
      </widget>
     </item>
-    <item row="1" column="0" colspan="2">
+    <item row="2" column="0" colspan="2">
      <widget class="QDialogButtonBox" name="buttonBox">
       <property name="styleSheet">
        <string notr="true">color:black;</string>
@@ -112,6 +112,39 @@
       <property name="standardButtons">
        <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
       </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="lblTema">
+      <property name="font">
+       <font>
+        <family>Dubai</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: black</string>
+      </property>
+      <property name="text">
+       <string>Tema: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="cbTema">
+      <property name="styleSheet">
+       <string notr="true">color: black</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Azul</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Amarillo</string>
+       </property>
+      </item>
      </widget>
     </item>
    </layout>

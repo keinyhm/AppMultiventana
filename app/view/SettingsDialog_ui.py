@@ -62,7 +62,22 @@ class Ui_SettingsDialog(object):
         self.buttonBox.setStyleSheet(u"color:black;")
         self.buttonBox.setStandardButtons(QDialogButtonBox.StandardButton.Cancel|QDialogButtonBox.StandardButton.Ok)
 
-        self.formLayout.setWidget(1, QFormLayout.ItemRole.SpanningRole, self.buttonBox)
+        self.formLayout.setWidget(2, QFormLayout.ItemRole.SpanningRole, self.buttonBox)
+
+        self.lblTema = QLabel(self.formLayoutWidget)
+        self.lblTema.setObjectName(u"lblTema")
+        self.lblTema.setFont(font)
+        self.lblTema.setStyleSheet(u"color: black")
+
+        self.formLayout.setWidget(1, QFormLayout.ItemRole.LabelRole, self.lblTema)
+
+        self.cbTema = QComboBox(self.formLayoutWidget)
+        self.cbTema.addItem("")
+        self.cbTema.addItem("")
+        self.cbTema.setObjectName(u"cbTema")
+        self.cbTema.setStyleSheet(u"color: black")
+
+        self.formLayout.setWidget(1, QFormLayout.ItemRole.FieldRole, self.cbTema)
 
 #if QT_CONFIG(shortcut)
 #endif // QT_CONFIG(shortcut)
@@ -83,5 +98,9 @@ class Ui_SettingsDialog(object):
         self.cbLanguage.setToolTip(QCoreApplication.translate("Dialog", u"Selecciona un idioma (solo ejemplo, no cambia nada)", None))
 #endif // QT_CONFIG(tooltip)
         self.cbLanguage.setCurrentText(QCoreApplication.translate("Dialog", u"Espa\u00f1ol", None))
+        self.lblTema.setText(QCoreApplication.translate("Dialog", u"Tema: ", None))
+        self.cbTema.setItemText(0, QCoreApplication.translate("Dialog", u"Azul", None))
+        self.cbTema.setItemText(1, QCoreApplication.translate("Dialog", u"Amarillo", None))
+
     # retranslateUi
 

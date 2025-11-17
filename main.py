@@ -3,6 +3,7 @@ import sqlite3
 from PySide6.QtWidgets import QApplication
 from app.data.db import init_db, get_connection
 from app.controller.AppController import AppController
+from app.styles.style_manager import StyleManager
 
 
 def main():
@@ -10,6 +11,9 @@ def main():
     
     app = QApplication(sys.argv)
     app.setApplicationName("App Qt Escalable")
+
+    style_manager = StyleManager()
+    style_manager.apply_app_style(app, "main_style.qss")
 
     conn = get_connection()
 

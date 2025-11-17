@@ -19,12 +19,23 @@ class SettingsDialog(QDialog, Ui_SettingsDialog):
         if idx >= 0:
             self.cbLanguage.setCurrentIndex(idx)
 
+        # Tema actual
+        tema_actual = self.app_state.get("theme", "Azul")
+        i = self.cbTema.findText(tema_actual)
+        if i >= 0:
+            self.cbTema.setCurrentIndex(i)
+
         # Botones
         self.buttonBox.accepted.connect(self.accept)
         self.buttonBox.rejected.connect(self.reject)
+
+    def _on_theme_preview(self, theme):
+        """Aplica el tema como vista previa (sin cerrar)."""
+        self.style_manager.apply_theme_by_name(self.app, theme)
 
     def accept(self):
         new_lang = self.cbLanguage.currentText()
         self.app_state["language"] = new_lang
         self.language_changed.emit(new_lang)
+        self.app_state["theme"] = self.cbTema.currentText()
         super().accept()
